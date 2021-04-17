@@ -26,4 +26,4 @@ def calculate_accuracy(target_ac, to_hit_modifier):
     :param to_hit_modifier:     The to-hit modifier of the attacker.
     :return:                    Probability to hit the target.
     """
-    return 21 - (target_ac - to_hit_modifier) / 20 * 100
+    return (21 - (target_ac - to_hit_modifier)) / 20
