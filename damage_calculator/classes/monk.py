@@ -27,3 +27,9 @@ class Monk:
         probability = calculate_accuracy(target_ac, self.to_hit_modifier)
         average_damage = calculate_average_roll(6) + self.damage_modifier
         return probability * average_damage
+
+    def rested_turn(self, target_ac):
+        return (self.weapon_attack(target_ac) + self.unarmed_attack(target_ac)) * 2
+
+    def spent_turn(self, target_ac):
+        return self.weapon_attack(target_ac) + self.unarmed_attack(target_ac) * 2
