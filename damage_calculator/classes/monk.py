@@ -56,3 +56,12 @@ class Monk:
         :return:            Damage caused by turn.
         """
         return self.weapon_attack(target_ac) + self.unarmed_attack(target_ac) * 2
+
+    def calculate_ten_turn_average(self, target_ac):
+        """
+        Calculate the average damage dealt over ten turns.
+
+        :param target_ac:   AC of target creature.
+        :return:            Damage caused over 10 turns.
+        """
+        return self.rested_turn(target_ac) * 3 + self.spent_turn(target_ac) * 7
