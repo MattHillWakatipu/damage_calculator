@@ -171,4 +171,4 @@ class Nomad:
         else:
             rested_damage = self.rested_turn(target_ac)
             spent_damage = self.spent_turn(target_ac)
-        return rested_damage * 3 + spent_damage * 7
+        return rested_damage * 4 + spent_damage * 6
